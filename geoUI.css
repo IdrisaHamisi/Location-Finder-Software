@@ -1,0 +1,81 @@
+/* Center all content on the page safely */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center to keep a predictable top-down flow */
+    min-height: 100vh; 
+    margin: 0;
+    text-align: center;
+    background-color: bisque;
+}
+
+#heading{
+    color: blueviolet;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-size: 64px; /* Fixed '100' to a proper unit like px */
+    font-weight: bold;
+}
+
+#para{
+    color: blueviolet;
+    text-align: center;
+    /* REMOVED margin-top: auto - This was causing the jumpiness */
+    margin-top: 20px; 
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.button{
+    background-color: antiquewhite;
+    border-radius: 50px;
+    display: flex;
+    gap: 40px; /* Reduced gap to keep layout tighter */
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 24px;
+}
+
+#find-me, #location-name {
+    color: blue;
+    border-radius: 40px;
+    font-size: 20px;          
+    padding: 12px 24px; 
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#find-me:hover, #location-name:hover {
+    color: white;
+    background-color: blueviolet;
+    font-weight: bold;
+}
+
+/* Wrapping status and links to maintain their height even when empty */
+#status {
+    padding: 10px;
+    font-size: 20px;
+    min-height: 30px; /* Preserves vertical space so layout doesn't shift when empty */
+    margin-top: 10px;
+}
+
+#map-link {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    min-height: 25px; /* Preserves vertical space */
+}
+
+#map-link:hover {
+    color: blue;
+}
+
+footer {
+    margin-top: auto; /* This safely pushes the footer to the absolute bottom of the page */
+    padding: 20px;
+}
